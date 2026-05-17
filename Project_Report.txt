@@ -1,0 +1,13 @@
+CS101 Project Report: Student Grade Management System
+
+This project was designed as a simple console-based system so a Level 100 student can explain each part clearly. I used parallel arrays to store student data: names, IDs, quiz scores, mid-sem scores, exam scores, totals, grades, and remarks. The maximum class size is fixed at 30 students to match the assignment requirement.
+
+I used modular design with many small functions. For example, there are separate functions for input, grade computation, report display, statistics display, and ID search. Helper functions were also added for reading validated integers and scores, assigning grade letters, and assigning remarks.
+
+Pointers were used in more than one way. First, arrays are passed to functions using pointer notation (for example string* names and float* quiz). Second, pointer traversal is used in computeGrades where pointer variables move through score arrays to calculate totals. Third, pass-by-pointer is used in calculateStatistics and inputStudents to return multiple output values.
+
+Input validation was important in this design. Quiz is limited to 0-20, Mid-sem to 0-30, and Exam to 0-50. If a user enters an invalid value, the program asks again until a valid score is provided.
+
+The processing module computes total score, grade, and remark for each student, then calculates class statistics including highest score, lowest score, average score, pass count, and fail count. The search module allows locating one student by ID and displaying their full result.
+
+No STL containers such as vector, list, or map were used. The structure was intentionally kept straightforward and beginner-friendly. If sample names are needed during demonstration, simple random/example names can be entered through the normal input flow.
