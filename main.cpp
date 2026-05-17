@@ -280,11 +280,15 @@ int main() {
     float midSem[MAX_STUDENTS] = {0.0f};
     float exam[MAX_STUDENTS] = {0.0f};
     float totals[MAX_STUDENTS] = {0.0f};
-    char grades[MAX_STUDENTS] = {'F'};
+    char grades[MAX_STUDENTS];
     string remarks[MAX_STUDENTS];
 
     int studentCount = 0;
     bool gradesComputed = false;
+
+    for (int i = 0; i < MAX_STUDENTS; i++) {
+        grades[i] = 'F';
+    }
 
     while (true) {
         int choice = displayMenu();
